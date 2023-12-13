@@ -1,0 +1,113 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap'); */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+
+}
+html , body{
+    height: 100%;
+    width: 100%;
+    background: #262626;
+
+}
+#main{
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.flip1{
+    height: 50vh;
+    width: 70vh;
+    top: 50%;  left: 50%;
+    background-color: #c1c1c1;
+}
+.flip1 img{
+    position: absolute;
+    height: 100%;
+    width: 70vh;
+    transform: perspective(1000px) rotateX(0deg);
+    transition: .9s;
+    backface-visibility: hidden;
+}
+.flip1:hover img{
+    transform: perspective(1000px) rotateX(180deg);
+}
+.flip1 .content{
+    height: 50vh;
+    width: 70vh;
+    background-color: #850707;
+    color: #fff;
+    transform: perspective(1000px) rotateX(-180deg);
+    transition: .9s;
+    backface-visibility: hidden;
+}
+.flip1:hover .content{
+    transform: perspective(1000px) rotateX(0deg);
+}
+.flip1 .content .center{
+    position: absolute;
+    top: 50%;  left: 50%;
+    transform: translate(-50%,-50%);
+    white-space: nowrap;
+    text-align: center;
+}
+.flip1 .content h1{
+    font-size: 25px;
+}
+.flip1 .content h1 span{
+    font-size: 18px;
+    color: #c1c1c1;
+}
+
+/* ---------------- flip 1 done */
+
+.flip2{
+    height: 50vh;
+    width: 70vh;
+    top: 50%;  left: 50%;
+    background-color: #c1c1c1;
+}
+.flip2 img{
+    position: absolute;
+    height: 100%;
+    width: 70vh;
+    transform: perspective(1000px) rotateY(0deg);
+    transition: .9s;
+    backface-visibility: hidden;
+}
+.flip2:hover img{
+    transform: perspective(1000px) rotateY(-180deg);
+}
+.flip2 .content2{
+    height: 50vh;
+    width: 70vh;
+    background-color: #850707;
+    color: #fff;
+    transform: perspective(1000px) rotateY(180deg);
+    transition: .9s;
+    backface-visibility: hidden;
+}
+.flip2:hover .content2{
+    transform: perspective(1000px) rotateY(0deg);
+}
+.flip2 .content2 .center2{
+    position: absolute;
+    top: 50%;  left: 50%;
+    transform: translate(-50%,-50%);
+    white-space: nowrap;
+    text-align: center;
+}
+.flip2 .content2 h1{
+    font-size: 25px;
+}
+.flip2 .content2 h1 span{
+    font-size: 18px;
+    color: #c1c1c1;
+}
+/* ---------------- flip 2 done */
+
